@@ -1,0 +1,28 @@
+#digital-clock{
+    background-color: rgb(17, 25, 26);
+    height: 620px;
+}
+
+.clock-details{
+    margin-top: 150px;
+    font-family: 'Squada One', cursive;
+    font-weight: 700;
+    font-size: 100px;
+}
+
+#hour, #minute, #second{
+    padding: 25px 30px;
+    color: cyan;
+    background-color: rgb(17, 25, 26);
+    box-shadow: 1px 2px 5px cyan;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+.clock-title h2{
+    color: cyan;
+}
+
+.clock-body{
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0002);
+}

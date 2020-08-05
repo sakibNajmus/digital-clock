@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Clock</title>
+    <!-- Bootsrap & CSS Link Here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section id="digital-clock">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="clock-details text-center">                        
+                        <div class="clock-title mb-4">
+                            <h2>Digital Clock by NAJMUS</h2>
+                        </div>
+
+                        <div class="clock-body d-flex justify-content-center">
+                            <div><span id="hour">00</span></div>
+                            <div><span id="minute">00</span></div>
+                            <div><span id="second">00</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function clock(){                
+            let hours = document.getElementById('hour');
+            let minutes = document.getElementById('minute');
+            let seconds = document.getElementById('second');
+
+            let h = new Date().getHours();
+            let m = new Date().getMinutes();
+            let s = new Date().getSeconds();
+
+            if(h > 12){
+                h = h - 12;
+            }
+            if(h == 0){
+                h = 12;
+            }
+
+            if(h < 10){
+                h = "0" + h;
+            }
+            if(m < 10){
+                m = "0" + m;
+            }
+            if(s < 10){
+                s = "0" + s;
+            }
+
+            hours.innerText = h;
+            minutes.innerText = m;
+            seconds.innerText = s;
+        }
+        const interval = setInterval(clock, 1000);
+    </script>
+ 
+<!-- JavaScript Link Here -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+</html>
